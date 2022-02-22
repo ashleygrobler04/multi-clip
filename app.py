@@ -13,8 +13,7 @@ class MyFrame(wx.Frame):
         wx.Frame.__init__(self, *args, **kwds)
         self.panel_1 = wx.Panel(self, wx.ID_ANY)
         self.SetSize((400, 300))
-        self.SetTitle("frame")
-
+        self.SetTitle("Multi Clip       ")
 
         sizer_1 = wx.BoxSizer(wx.VERTICAL)
 
@@ -75,8 +74,9 @@ class MyFrame(wx.Frame):
 
 class MyApp(wx.App):
     def OnInit(self):
-        self.frame = MyFrame(None, wx.ID_ANY, "")
+        self.frame = MyFrame(None, wx.ID_ANY, "Multi Clip")
         self.SetTopWindow(self.frame)
+        self.frame.SetBackgroundColour(wx.Colour(255,255,255))
         self.frame.Show()
         return True
 
